@@ -7,27 +7,6 @@
     "text": "This progress journal covers Zeynep Yagmur Guner’s work during their term at BDA 503 Fall 2022.\nEach section is an assignment or an individual work."
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
     "objectID": "assignment1.html",
     "href": "assignment1.html",
     "title": "1  Assignment 1",
@@ -54,5 +33,26 @@
     "title": "1  Assignment 1",
     "section": "K-means clustering",
     "text": "K-means clustering\nThis post talks about what k-means clustering is and how it is applied in R. Here author defines K-means clustering as K-means clustering partitions a group of observations into a fixed number of clusters that have been initially specified based on their similar characteristics. To use k-means clustering we have to define k, the number of clusters, initial guess of cluster positions which will be calculated again and a distance metric. This post uses a data example of 10 points to explain the process so it is easy to understand the logic behind the k-means clustering. We can summarize the basic idea of process using the example given in the post as follows: First we choose k, the number of clusters. In the example it is possible to see in the plot of the data that we will have 3 clusters. In more complex problems there are methods used to determine the number of clusters, one of them is given in the post later, the elbow-point technique. After we determine the number of clusters we choose 3 initial points for our clusters. For each point, the distance between the initial points is measured, and the data point is assigned to the closest initial point. After that process is completed, the clusters elements are determined. Then the mean of each cluster is calculated and the initial points chosen for clusters are assigned to these points. The parts that determine the clusters and cluster points will be calculated repeatedly until the position of the clusters no longer change. The packages used for this analysis are ggplot2, dplyr and ggfortify. While calculating the means of clusters, kmeans function is used."
+  },
+  {
+    "objectID": "in_class_assignment1.html",
+    "href": "in_class_assignment1.html",
+    "title": "2  In Class Assignment-1",
+    "section": "",
+    "text": "Using nycflights13 package I have prepared the following analyses."
+  },
+  {
+    "objectID": "in_class_assignment1.html#analysis-1-number-of-tailnumbers-per-grouped-number-of-seats.",
+    "href": "in_class_assignment1.html#analysis-1-number-of-tailnumbers-per-grouped-number-of-seats.",
+    "title": "2  In Class Assignment-1",
+    "section": "2.1 Analysis-1 Number of tailnumbers per grouped number of seats.",
+    "text": "2.1 Analysis-1 Number of tailnumbers per grouped number of seats.\n\nplanes %>% \n  mutate(seat_bracket=case_when(seats<=100 ~ \"(0-100]\", seats<=200 ~\"(100-200]\",seats<=300 ~\"(200-300]\", seats<=400 ~\"(300-400]\",TRUE ~ \"(400-HI]\")) %>% \n  group_by(seat_bracket) %>%\n  summarise(count=n()) %>% \n  print(n=Inf)\n\n# A tibble: 5 × 2\n  seat_bracket count\n  <chr>        <int>\n1 (0-100]        820\n2 (100-200]     2207\n3 (200-300]       98\n4 (300-400]      196\n5 (400-HI]         1"
+  },
+  {
+    "objectID": "in_class_assignment1.html#analysis-2-average-min-and-max-speed-with-respect-to-type-engine-and-number-of-engines.",
+    "href": "in_class_assignment1.html#analysis-2-average-min-and-max-speed-with-respect-to-type-engine-and-number-of-engines.",
+    "title": "2  In Class Assignment-1",
+    "section": "2.2 Analysis-2 Average, min and max speed with respect to type, engine and number of engines.",
+    "text": "2.2 Analysis-2 Average, min and max speed with respect to type, engine and number of engines.\nFirst, we check the distinct values of speed column.\n\nplanes %>%\n  group_by(speed) %>%\n  summarise(count=n()) %>%\n  arrange(desc(speed)) %>%\n  print(n=Inf)\n\n# A tibble: 14 × 2\n   speed count\n   <int> <int>\n 1   432     8\n 2   232     1\n 3   202     1\n 4   167     1\n 5   162     2\n 6   127     1\n 7   126     1\n 8   112     1\n 9   108     1\n10   107     1\n11   105     2\n12    95     1\n13    90     2\n14    NA  3299\n\n\nWe see that most of the speed data is non-existent. With the remaining data here is the table for average, min and max of speed by type, engine and number of engines.\n\noptions(dplyr.summarise.inform=FALSE)\nplanes %>%\n  filter(!is.na(speed)) %>%\n  group_by(type,engine,engines) %>%\n  summarise(avg_speed=round(mean(speed),2),min_speed=min(speed),max_speed=max(speed)) %>%\n  arrange(type,engine,engines) %>%\n  print(n=Inf)\n\n# A tibble: 7 × 6\n# Groups:   type, engine [6]\n  type                     engine        engines avg_speed min_speed max_speed\n  <chr>                    <chr>           <int>     <dbl>     <int>     <int>\n1 Fixed wing multi engine  Reciprocating       2      145.        90       167\n2 Fixed wing multi engine  Reciprocating       4      232        232       232\n3 Fixed wing multi engine  Turbo-jet           2      432        432       432\n4 Fixed wing multi engine  Turbo-prop          2      202        202       202\n5 Fixed wing single engine 4 Cycle             1      108        108       108\n6 Fixed wing single engine Reciprocating       1      108.        90       127\n7 Rotorcraft               Turbo-shaft         1      112        112       112"
   }
 ]

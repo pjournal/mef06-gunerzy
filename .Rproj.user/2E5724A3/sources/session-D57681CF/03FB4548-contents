@@ -8,7 +8,6 @@ book:
   chapters:
     - index.qmd
     - assignment1.qmd
-    - in_class_assignment1.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]

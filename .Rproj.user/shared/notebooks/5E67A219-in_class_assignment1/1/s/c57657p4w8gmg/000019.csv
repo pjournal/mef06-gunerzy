@@ -1,0 +1,7 @@
+"0","options(dplyr.summarise.inform=FALSE)"
+"0","planes %>%"
+"0","  filter(!is.na(speed)) %>%"
+"0","  group_by(type,engine,engines) %>%"
+"0","  summarise(avg_speed=round(mean(speed),2),min_speed=min(speed),max_speed=max(speed)) %>%"
+"0","  arrange(type,engine,engines) %>%"
+"0","  print(n=Inf)"
