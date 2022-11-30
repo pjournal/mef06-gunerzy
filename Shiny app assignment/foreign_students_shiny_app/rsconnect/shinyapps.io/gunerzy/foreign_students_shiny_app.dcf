@@ -1,0 +1,13 @@
+name: foreign_students_shiny_app
+title: foreign_students_shiny_app
+username:
+account: gunerzy
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7766876
+bundleId: 6570032
+url: https://gunerzy.shinyapps.io/foreign_students_shiny_app/
+when: 1669769237.16429
+lastSyncTime: 1669769237.1643
+asMultiple: FALSE
+asStatic: FALSE
