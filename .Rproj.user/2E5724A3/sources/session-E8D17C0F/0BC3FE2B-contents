@@ -1,15 +1,19 @@
----
+------------------------------------------------------------------------
+
 title: "Shiny Assignment"
+
 editor: visual
----
+
+------------------------------------------------------------------------
 
 Using foreign students by nationality data I have constructed a shiny app which gives a bar chart of total number of foreign students by the top 5 common nationality. The table can be filtered by province and/or by the university type.
 
 My shiny app link is [here](https://gunerzy.shinyapps.io/foreign_students_shiny_app/).
 
-It can also be accessed from the code below.
+It can also be accessed from the below code.
 
-``` {{r}}
-library(shiny)
+```{r}
+
 shiny::runGitHub("pjournal/mef06-gunerzy",subdir="Shiny app assignment/foreign_students_shiny_app/")
+
 ```
