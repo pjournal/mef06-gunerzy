@@ -1,0 +1,2 @@
+library(shiny)
+shiny::runGitHub("pjournal/mef06-gunerzy",subdir="Shiny app assignment/foreign_students_shiny_app/")
