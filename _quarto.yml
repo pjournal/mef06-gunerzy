@@ -3,13 +3,14 @@ project:
   output-dir: docs
 
 book:
-  title: "Yagmur Guner Progress Journal"
+  title: "Zeynep Yagmur Guner's Progress Journal"
   repo-url: https://github.com/pjournal/mef06-gunerzy
   chapters:
     - index.qmd
     - assignment1.qmd
     - in_class_assignment1.qmd
     - shiny_assignment.qmd
+    - OR_assignment.qmd
   page-footer: 
     center: "[MEF BDA 503](https://mef-bda503.github.io)" 
   sharing: [twitter, facebook]

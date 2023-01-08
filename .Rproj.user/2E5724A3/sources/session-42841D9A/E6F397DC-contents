@@ -1,0 +1,18 @@
+---
+title: "OR_assignment"
+editor: visual
+---
+
+# Case Study: Emesa: Marketing Campaign Optimization
+
+The link for this case study could be found [here](https://www.gurobi.com/case_studies/emesa-marketing-campaign-optimization/).
+
+An online auction company based on Netherlands and Belgium, Emesa developed an automatized their e-mail sending process using mathematical optimization tools. In this case study, we see the details of the project such as how they improved their previous e-mail sending system, which tools they used and why and the effects of the changes they made.
+
+The main goal of the e-mail marketing project is to drive more traffic and engagement to the sites which results in additional revenue. Strategy building for e-mail sending optimization is challenging for several reasons. The number and variety of products are constantly increasing, customer preferences changing quickly and this requires personalized experience for each group of customers and of course there are regulations for e-mail communications. A good strategy should consider all of these cases to get the best possible result from sending an e-mail.
+
+Emesa's prior e-mail strategy was a manual process and used heuristics-based methods to achieve goals above. But this became inefficient since it is time consuming and could not ensure that the right content is sent to the right customer. So they have decided to automatize the process and use a mathematical optimization application to improve their e-mail marketing campaigns.
+
+In this application they considered the following main points; customers' unique bidding history for personalization, customers' e-mail preferences to define how many e-mails to send, auction schedules which change on a daily basis and finally the regulations on e-mail marketing. With this process they have managed to detect the optimum time to send an e-mail to a customer and the content of that e-mail. Which resulted in more traffic in their platforms and generated more bidding.
+
+With this optimization project Emesa gained %5 increase in the volume of sent e-mails by reducing planning inefficiencies, %6 increase in the number of e-mails opened, %6 increase in traffic to online auction platforms and %6 increase in revenue due to e-mail campaigns. The company is planning to apply a similar strategy to other channels such as push notifications.

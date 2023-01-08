@@ -1,0 +1,5 @@
+"0","library(scales)"
+"0","library(tidyverse)"
+"0",""
+"0","sector_data_org <- read_rds(""Group_Project_Data/sector_information.rds"")"
+"0","head(sector_data)"
